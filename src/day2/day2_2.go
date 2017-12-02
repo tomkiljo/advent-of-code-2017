@@ -23,7 +23,7 @@ func MinInt(a, b int) int {
 }
 
 func main() {
-	fmt.Println("Advent of Code 2017 - Day 2 Part 1")
+	fmt.Println("Advent of Code 2017 - Day 2 Part 2")
 	fmt.Println("Enter puzzle input: ")
 
 	sum := 0
