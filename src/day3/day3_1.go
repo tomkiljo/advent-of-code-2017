@@ -8,6 +8,13 @@ import (
 	"strings"
 )
 
+func AbsInt(a int) int {
+	if a < 0 {
+		return a * -1
+	}
+	return a
+}
+
 func Last(n int) int {
 	return (n*(n+1)/2)*8 + 1
 }
@@ -21,11 +28,12 @@ func main() {
 	val, _ := strconv.Atoi(strings.TrimSpace(text))
 
 	n := 1
-	for i := 1; val >= Last(i); i++ {
+	for i := 1; val > Last(i); i++ {
 		n++
 	}
 
 	seq := Last(n) - val
-	dis := seq - (seq/(n*2))*(n*2)
+	off := seq - (seq/(n*2))*(n*2)
+	dis := AbsInt(n*2 - off)
 	fmt.Println("Result: ", dis)
 }
