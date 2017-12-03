@@ -33,10 +33,7 @@ func main() {
 	}
 
 	seq := Last(n) - val
-	off := seq - (seq/(n*2))*(n*2)
-	if off > n {
-		off -= n
-	}
-	dis := AbsInt(n*2 - off)
+	off := seq - ((seq)/(n*2))*(n*2)
+	dis := n + AbsInt(off-n)
 	fmt.Println("Result: ", dis)
 }
